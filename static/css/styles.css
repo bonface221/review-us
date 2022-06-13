@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Nixie+One|Raleway:200");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.navbar-brand img {
+	height: 100%;
+	width: 8rem;
+}
+header {
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+	position: sticky;
+	top: 0;
+	left: 0;
+}
+.home {
+	background: url(../images/santateresafest-cover.jpg), no-repeat;
+	background-position: center;
+
+	background-size: cover;
+	min-height: 70vh;
+    color: #fff;
+
+
+}
+.home .content{
+    position: relative;
+    height: 70vh;
+
+}
+.content .top-left{
+    position:absolute;
+    top: 3%;
+    left: 2%;
+}
+.content .inner-content{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.content .inner-content .user{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.content .btn{
+    position: absolute;
+    bottom: 3%;
+    left: 2%;
+}
+
+
+
+
+
+
+
+
+
+.display-container {
+	display: flex;
+	margin: auto;
+	font-family: "Nixie One", cursive;
+	color: #fff;
+}
+
+.note-display {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: 0 25px;
+}
+
+/* Component start */
+.CircleStrokeMeter {
+	text-align: center;
+}
+
+.CircleStrokeMeter > svg {
+	height: 96px;
+	width: 96px;
+}
+
+.CircleStrokeMeter > svg > circle {
+	fill: none;
+	stroke-opacity: 0.3;
+	stroke-width: 2;
+	transform-origin: center center;
+	transform: rotate(-90deg);
+}
+
+.CircleStrokeMeter > svg > circle + circle {
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+	stroke-linecap: round;
+	stroke-opacity: 1;
+}
+
+.CircleStrokeMeter.animatable > svg > circle + circle {
+	transition: stroke-dashoffset 0.9s ease;
+}
+
+.CircleStrokeMeter > svg > text {
+	fill: currentcolor;
+	font-size: 14px;
+	stroke: none;
+}
+
+.CircleStrokeMeter > svg > text > tspan + tspan {
+	font-size: xx-small;
+}
+
+.CircleStrokeMeter > figcaption {
+	font-family: "Raleway", serif;
+	font-size: 14px;
+	margin-top: 15px;
+	text-transform: uppercase;
+}
+
+.note-display:nth-child(1) > .CircleStrokeMeter > svg {
+	stroke: #af0;
+}
+.note-display:nth-child(2) > .CircleStrokeMeter > svg {
+	stroke: #f0a;
+}
+.note-display:nth-child(3) > .CircleStrokeMeter > svg {
+	stroke: #a0f;
+}
+.note-display:nth-child(4) > .CircleStrokeMeter > svg {
+	stroke: #0af;
+}
+
+.note-display > button {
+	line-height: 2;
+	padding: 0 1em;
+}
