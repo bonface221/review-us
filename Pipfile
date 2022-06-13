@@ -9,6 +9,8 @@ cloudinary = "*"
 python-decouple = "*"
 dj-database-url = "*"
 whitenoise = "*"
+psycopg2 = "*"
+django-crispy-forms = "*"
 
 [dev-packages]
 
