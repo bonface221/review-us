@@ -37,6 +37,7 @@ INSTALLED_APPS = [
 
     'cloudinary',
     'base.apps.BaseConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -148,3 +149,6 @@ cloudinary.config(
   api_key = config('api_key'), 
   api_secret = config('api_secret')
 )
+
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
