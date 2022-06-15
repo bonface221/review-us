@@ -8,7 +8,7 @@
     <div class="card">
         <div class="view overlay">
             <img class="card-img-top"  width="100%"
-                 src="{{post.profile_picture.url}}" alt="">
+                 src="https://res.cloudinary.com/twin221/{{post.profile_picture}}" alt="">
             <a href="">
                 <div class="mask rgba-black-slight">
                     <div class="container">
@@ -43,7 +43,7 @@
             </p>
             <p>{{ post.description }}</p>
             <hr>
-            <p class="card-text "><img src="{{post.user.profile.profile_picture.url}}" class="nav-img mr-2" alt="">
+            <p class="card-text "><img src="https://res.cloudinary.com/twin221/{{post.user.profile.profile_picture}}" class="nav-img mr-2" alt="">
                 By {{post.user.username|title}} <span style="float:right">{{post.date|date}}</span>
             </p>
             <div class="row">
