@@ -1,3 +1,5 @@
+
+
 function run() {
 	Array.from(document.querySelectorAll(".CircleStrokeMeter")).forEach(
 		CircleStrokeMeter
@@ -56,4 +58,3 @@ function increaseNumber(numberElement, score, duration) {
 }
 
 run();
-
