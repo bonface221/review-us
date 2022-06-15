@@ -1,7 +1,7 @@
 {% load static %}
 <header>
-	<nav class="container navbar navbar-expand-lg navbar-light scrolling-navbar">
-		<a class="navbar-brand" href="#"
+	<nav class="container navbar navbar-expand-lg navbar-light">
+		<a class="navbar-brand" href="{% url 'home'%}"
 			><img src="{% static 'images/awwards-logo.png'%}" alt="logo"
 		/></a>
 		<button
@@ -17,33 +17,27 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<div class="mr-auto"></div>
+			{% if user.is_authenticated %}
 			<ul class="navbar-nav navbar-right">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                       aria-haspopup="true"
-                       aria-expanded="false">
-					   Boni
-					    <img class="rounded-circle nav-img"
+				<li class="nav-item">
+					<a href="{% url 'profile' request.user.username %}">boni <img class="rounded-circle nav-img"
                         src="{% static 'images/dp.jpg'%}"
 						style="height:25px;width: 25px;"
-                        alt="">
-                    </a>
-                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item text-center" href="">Profile</a>
-                        <hr>
-                        <a class="dropdown-item text-center" href=""> Edit profile</a>
-                        <hr>
-                        <a href="{% url 'logout' %}" class="text-secondary text-center dropdown-item">Log Out</a>
-
-
-                    </div>
+                        alt=""></a> 
+				</li>
                 </li>
                 
-                <a href="{% url 'login' %}" class="login btn btn-sm btn-info"> REGISTER/LOGIN </a>
+                <a href="{% url 'logout' %}" class="login btn btn-sm btn-info mr-2 ml-2"> Logout </a>
+                <a href="{% url 'settings' request.user.username %}" class="login btn btn-sm btn-info mr-2 ml-2"> settings</a>
+                
                 
                 <button class="btn btn-info btn-sm" id="site" data-toggle="modal" data-target=".bd-example-modal-xl">
                     Submit your site
                 </button>
+				{%else%}
+				<a href="{% url 'login' %}" class="login btn btn-sm btn-info mr-2 ml-2"> LOGIN </a>
+
+				{% endif %}
 		</div>
 	</nav>
 </header>
