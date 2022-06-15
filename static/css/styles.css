@@ -3,6 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 .navbar-brand img {
@@ -14,7 +15,12 @@ header {
 	position: sticky;
 	top: 0;
 	left: 0;
+    z-index: 999;
+    background-color: #fff;
+	right: 0;
 }
+
+
 .home {
 	background: url(../images/santateresafest-cover.jpg), no-repeat;
 	background-position: center;
@@ -25,6 +31,7 @@ header {
 
 
 }
+
 .home .content{
     position: relative;
     height: 70vh;
@@ -51,13 +58,10 @@ header {
     left: 2%;
 }
 
+.card {
 
-
-
-
-
-
-
+  margin-bottom: 2rem;
+}
 
 .display-container {
 	display: flex;
@@ -136,3 +140,4 @@ header {
 	line-height: 2;
 	padding: 0 1em;
 }
+
